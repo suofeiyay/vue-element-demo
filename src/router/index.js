@@ -15,7 +15,7 @@ import Layout from '@/layout'
 export const constantRoutes = [
   {
     path: '/login',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    meta: { title: 'login', icon: 'el-icon-s-help' },
     component: () => import('@/views/login/index'),
     hidden: true
   },
@@ -23,7 +23,7 @@ export const constantRoutes = [
     path: '/',
     component: Layout,
     redirect: '/home',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    meta: { title: 'home', icon: 'el-icon-s-help' },
     children: [
       {
         path: 'home',

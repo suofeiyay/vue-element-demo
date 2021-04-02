@@ -27,7 +27,7 @@
           @keyup.enter.native="handleLogin"
         />
         <span class="show-pwd" @click="showPwd">
-          <!-- <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" /> -->
+          <svg-icon class="icon-el" :icon-class="passwordType === 'password' ? 'el-icon-tickets' : 'el-icon-printer'" />
         </span>
       </el-form-item>
       <el-form-item>
@@ -44,8 +44,12 @@
 
 <script>
 import { validUsername } from '@/utils/validate'
+import SvgIcon from '@/components/SvgIcon'
 export default {
   name: 'Login',
+  components: {
+    SvgIcon
+  },
   data() {
     const validateusername = (rule, value, callback) => {
       if (!validUsername(value)) {
@@ -140,5 +144,9 @@ export default {
     }
   }
 }
-
+.icon-el{
+  display: inline-block;
+  font-size: 15px;
+  width:12px;
+}
 </style>
